@@ -115,7 +115,7 @@ public class RadioTest {
     }
 
     @Test
-    public void LowVolume() {  //Уменьшение громкости
+    public void LowVolume() {  //Уменьшение громкости на 1
         Radio rad = new Radio();
 
         rad.setDecreaseVolume(2);
@@ -130,7 +130,7 @@ public class RadioTest {
     public void LowVolumeBelowLimit() { //Уменьшение громкости ниже 0
         Radio rad = new Radio();
 
-        rad.setDecreaseStation(-1);
+        rad.setDecreaseVolume(-1);
 
         int expected = 0;
         int actual = rad.getCurrentVolume();
